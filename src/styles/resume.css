@@ -10,12 +10,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background: #111827;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #000000;
+  color: #000;
   font-size: 10.5pt;
   line-height: 1.25;
 }
@@ -29,9 +29,7 @@ body {
   min-height: 297mm;
   margin: 0 auto;
   padding: 13mm 15mm 12mm;
-
-  background: #ffffff;
-
+  background: #fff;
   overflow: hidden;
 }
 
@@ -272,7 +270,7 @@ a {
     height: 297mm;
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #fff;
   }
 
   .resume {
@@ -282,10 +280,11 @@ a {
     margin: 0;
     padding: 13mm 15mm 12mm;
     overflow: hidden;
+    background: #fff;
   }
 
   a {
-    color: #000000;
+    color: #000;
     text-decoration: none;
   }
 }
@@ -296,7 +295,7 @@ a {
 
 @media screen {
   body {
-    background: #eeeeee;
+    background: #111827;
   }
 
   .resume {
