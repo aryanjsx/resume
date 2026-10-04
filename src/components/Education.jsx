@@ -10,7 +10,7 @@ function Education() {
       <div className="education-entry">
         <div className="education-header">
           <span className="education-institution">
-            • {education.institution}
+            {education.institution}
           </span>
 
           <span className="education-duration">
