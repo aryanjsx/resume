@@ -1,0 +1,359 @@
+/* =========================================
+   Resume - A4 / ATS Friendly
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-size: 10.5pt;
+  line-height: 1.25;
+}
+
+/* =========================================
+   A4 Resume Container
+   ========================================= */
+
+.resume {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 13mm 15mm 12mm;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.resume-name {
+  margin: 0 0 4px;
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 9.5pt;
+  line-height: 1.2;
+}
+
+.contact-info span,
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-info span:not(:last-child)::after,
+.contact-info a:not(:last-child)::after {
+  content: " | ";
+  white-space: pre;
+}
+
+/* =========================================
+   Sections
+   ========================================= */
+
+.resume-section {
+  margin: 0 0 9px;
+}
+
+.section-title {
+  margin: 0 0 4px;
+  padding-bottom: 2px;
+
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.15;
+
+  border-bottom: 1px solid #000000;
+}
+
+/* =========================================
+   Professional Summary
+   ========================================= */
+
+.summary-text {
+  margin: 0;
+  text-align: justify;
+  font-size: 10pt;
+  line-height: 1.28;
+}
+
+/* =========================================
+   Education
+   ========================================= */
+
+.education-entry {
+  margin: 0;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+
+  font-size: 10pt;
+  line-height: 1.25;
+}
+
+.education-institution {
+  font-weight: 700;
+}
+
+.education-duration {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.education-details {
+  margin-top: 1px;
+  font-size: 10pt;
+  line-height: 1.25;
+}
+
+/* =========================================
+   Skills
+   ========================================= */
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skill-row {
+  display: block;
+  font-size: 10pt;
+  line-height: 1.22;
+}
+
+.skill-category {
+  font-weight: 700;
+}
+
+.skill-technologies {
+  font-weight: 400;
+}
+
+/* =========================================
+   Work Experience
+   ========================================= */
+
+.experience-entry {
+  margin: 0;
+}
+
+.experience-title {
+  margin: 0;
+}
+
+.job-role {
+  margin: 0;
+  font-size: 10.5pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.experience-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+
+  margin-top: 1px;
+
+  font-size: 10pt;
+  line-height: 1.2;
+}
+
+.company-name {
+  font-weight: 700;
+}
+
+.job-duration {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.experience-bullets {
+  margin: 3px 0 0;
+  padding-left: 16px;
+
+  font-size: 10pt;
+  line-height: 1.25;
+}
+
+.experience-bullets li {
+  margin: 0 0 2px;
+  padding-left: 1px;
+}
+
+/* =========================================
+   Projects
+   ========================================= */
+
+.project-entry {
+  margin: 0;
+}
+
+.project-name {
+  margin: 0 0 2px;
+
+  font-size: 10.5pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.project-bullets {
+  margin: 0;
+  padding-left: 16px;
+
+  font-size: 10pt;
+  line-height: 1.25;
+}
+
+.project-bullets li {
+  margin: 0 0 2px;
+  padding-left: 1px;
+}
+
+/* =========================================
+   Links
+   ========================================= */
+
+a {
+  color: inherit;
+}
+
+/* =========================================
+   Print / PDF
+   ========================================= */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .resume-actions,
+  .download-button {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .resume {
+    width: 210mm;
+    min-height: 297mm;
+    height: 297mm;
+    margin: 0;
+    padding: 13mm 15mm 12mm;
+    overflow: hidden;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+/* =========================================
+   Screen
+   ========================================= */
+
+@media screen {
+  body {
+    background: #eeeeee;
+  }
+
+  .resume {
+    margin: 24px auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* =========================================
+   Smaller Screens
+   ========================================= */
+
+@media screen and (max-width: 800px) {
+  body {
+    background: #ffffff;
+  }
+
+  .resume {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 24px;
+    box-shadow: none;
+  }
+
+  .education-header,
+  .experience-meta {
+    gap: 8px;
+  }
+}
+/* =========================================
+   Resume Actions
+   ========================================= */
+
+.resume-actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.download-button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  opacity: 0.85;
+}
+
+.download-button:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
